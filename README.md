@@ -11,15 +11,15 @@ Simple authentication service with API and token.
 ```
 # Update paths to your API (loginFactory.js)
 
-$http.post('http://localhost:8000/api-token-auth/', udata)  						// LoginReqFactory
+$http.post('http://localhost:8000/api-token-auth/', udata)  // LoginReqFactory
 
-$http.post('http://localhost:8000/api-token-verify/', {token:data.token})		    // VerifyTokenFactory
+$http.post('http://localhost:8000/api-token-verify/', {token:data.token})   // VerifyTokenFactory
 
-$http.post('http://localhost:8000/api-token-refresh/', {token:data.token})         	// RefreshTokenFactory
+$http.post('http://localhost:8000/api-token-refresh/', {token:data.token})  // RefreshTokenFactory
 
 # Update your prefix header (loginService.js)
 
-$http.defaults.headers.common.Authotization = 'JWT ' + resp; 						// Your Prefix Header;
+$http.defaults.headers.common.Authotization = 'JWT ' + resp;    // Your Prefix Header;
 ```
 
 * Start your API and check in browser login page
